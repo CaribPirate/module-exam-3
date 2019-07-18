@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dice Simulator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Unicase&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Dice Game</h1>
+    <h2>Beat the house and win your bet!</h2>
+    <hr>
+    <table align="center">
+        <tr>
+            <td>Funds: $<span id="funds">5000</span></td>
+            <td>Bet:<input id="bet-input"
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                    type="number" maxlength="4" placeholder="Max = $9999">
+                <button id="play-btn">PLAY</button></td>
+        </tr>
+        <tr>
+            <td>
+                <p>House Roll</p>
+                <img id="house-die" src="images/question-mark.png">
+            </td>
+            <td>
+                <p>Your Roll</p>
+                <img id="player-die" src="images/question-mark.png">
+            </td>
+        </tr>
+    </table>
+
+    <button id="purchase-btn">Buy Riches & Luxury</button>
+    <button id="clear-btn">Clear</button>
+    <button id="reset-btn">Reset</button>
+    <h2>Your Loot</h2>
+    <p id="loot"></p>
+    <script src="main.js"></script>
+</body>
+
+</html>
